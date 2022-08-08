@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Grocery</title>
+</head>
+<body>
+<h1>Display all grocery items</h1>
+{% for g in grocery %}
+    {{g.name}}
+    {{g.prize}}
+{% endfor %}
+</body>
+</html>
