@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Category',
     'Store',
     'Carts',
+    'Acoounts',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
