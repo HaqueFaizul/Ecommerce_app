@@ -44,15 +44,29 @@ def Login(request):
             return render(request, 'dashbord.html')
         else:
             return render(request, 'register.html')
+            messages.success(request, "Invalid credentials")
 
 @login_required(login_url='login')
 def Logout(request):
     auth.logout(request)
+    messages.success(request,"Successfully Logged out")
     return redirect('/account/login')
 
 @login_required(login_url='login')
 def Dashbord(request):
     return render(request,'dashbord.html')
+
+'''Steps to push our project to git hub
+1. Check the status of git
+    git status
+2. Track all files before we push it to online repository
+    git add -A
+3. Make commit of all tracked file
+    git commit -m "Commited message"
+4. push your commited file to online repository
+    git push -u origin main
+5. Now your file is successfully pushed to online repository
+    go to you github account and check all files has been pushed successfully'''
 
 
 
